@@ -1,0 +1,14 @@
+{
+    "deposits": [
+        "1000",
+        "10000"
+    ],
+    "withdraws": [],
+    "transfer": {
+        "azam@gmail.com": [
+            -200,
+            -400,
+            1000
+        ]
+    }
+}
