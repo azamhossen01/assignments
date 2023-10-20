@@ -15,34 +15,24 @@ class Connection
 
     private function __construct()
     {
-        $hostName = "localhost";
-        $databaseName = "assignment_4";
-        $userName = "root";
-        $password = "";
+        $config = require_once(__DIR__ . '/../../config/database.php');
+        $hostName = $config['mysql']["host"];
+        $databaseName = $config['mysql']['database'];
+        $userName = $config['mysql']['username'];
+        $password = $config['mysql']['password'];
         try {
             $this->conn = new PDO("mysql:host=$hostName;dbname=$databaseName", $userName, $password);
             // set the PDO error mode to exception
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            //echo "Connected successfully";
         } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
     }
 
-    // public static function getInstance()
-    // {
-    //     if(!self::$instance){
-    //         echo 'new instance';
-    //         self::$instance = new self();
-    //     }
-    //     echo 'old instance';
-    //     return self::$instance;
-    // }
     public static function getInstance()
     {
         if (!self::$instance) {
             self::$instance = new self();
-           // echo 'New instance created.'; // Optionally, you can include this message.
         } 
         return self::$instance;
     }
@@ -56,16 +46,5 @@ class Connection
     {
         
     }
-
-
-    // public function createTable($sql)
-    // {
-    //     try {
-    //         $this->conn->exec($sql);
-    //     } catch (PDOException $e) {
-    //         echo  $e->getMessage();
-    //     }
-    // }
-   
 
 }
