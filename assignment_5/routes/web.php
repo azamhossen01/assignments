@@ -25,5 +25,5 @@ Route::get('/resume', [PortfolioController::class, 'resume'])->name('resume');
 Route::get('/service', [PortfolioController::class, 'service'])->name('service');
 Route::get('/contact', [PortfolioController::class, 'contact'])->name('contact');
 Route::get('/portfolio', [PortfolioController::class, 'portfolio'])->name('portfolio');
-Route::get('/portfolio_details/{id}', [PortfolioController::class, 'portfolioDetails'])->name('portfolio.details');
+Route::get('/portfolio_details/{id}', [PortfolioController::class, 'details'])->name('portfolio.details');
 

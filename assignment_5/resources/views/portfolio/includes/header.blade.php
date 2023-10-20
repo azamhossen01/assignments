@@ -1,12 +1,18 @@
 <header id="header">
     <div class="d-flex flex-column">
     @php
-        $data = File::json(storage_path('/data/resume.json'));
-        // $data = File::json(storage_path('/data/resume.json'))['profile'];
+        if(file_exists(storage_path('/data/profile.json'))){
+          $profile = File::json(storage_path('/data/profile.json'));
+        }
+        if(file_exists(storage_path('/data/theme.json'))){
+          $data = File::json(storage_path('/data/theme.json'));
+        }
+        
+        // $data = File::json(storage_path('/data/resume.json'));
     @endphp
       <div class="profile">
-        <img src="{{ $data['profile']['avatar'] }}" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="{{ route('home') }}">{{ $data['profile']['name'] }}</a></h1>
+        <img src="{{ $profile['avatar'] }}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="{{ route('home') }}">{{ $profile['name'] }}</a></h1>
         <div class="social-links mt-3 text-center">
           @forelse ($data['socials'] as $item)
               <a target="_blank" href="{{ $item['link'] }}" class="{{ $item['class'] }}"><i class="{{ $item['icon'] }}"></i></a>

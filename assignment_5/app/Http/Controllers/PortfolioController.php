@@ -10,8 +10,9 @@ class PortfolioController extends Controller
 
     public function home()
     {
-        if(file_exists(storage_path('data/resume.json'))){
-            $avatar = File::json(storage_path('data/resume.json'))['profile']['avatar'];
+        if(file_exists(storage_path('data/profile.json'))){
+            
+            $avatar = File::json(storage_path('data/profile.json'))["avatar"];
             return view('portfolio.index', compact('avatar'));
         }else{
             return "File does not exists";
@@ -21,8 +22,8 @@ class PortfolioController extends Controller
 
     public function about()
     {
-        if(file_exists(storage_path('data/resume.json'))){
-            $profile = File::json(storage_path('data/resume.json'))['profile'];
+        if(file_exists(storage_path('data/profile.json'))){
+            $profile = File::json(storage_path('data/profile.json'));
             return view('portfolio.about', compact('profile'));
         }else{
             return "File does not exists";
@@ -32,8 +33,8 @@ class PortfolioController extends Controller
 
     public function resume()
     {
-        if(file_exists(storage_path('data/resume.json'))){
-            $experiences = File::json(storage_path('data/resume.json'))['work_experience'];
+        if(file_exists(storage_path('data/experience.json'))){
+            $experiences = File::json(storage_path('data/experience.json'))['work_experience'];
             return view('portfolio.resume', compact('experiences'));
         }else{
             return "File does not exists";
@@ -42,28 +43,28 @@ class PortfolioController extends Controller
 
     public function portfolio()
     {
-        if(file_exists(storage_path('data/resume.json'))){
-            $projects = File::json(storage_path('data/resume.json'))['projects'];
-            return view('portfolio.portfolio', compact('projects'));
+        if(file_exists(storage_path('data/portfolio.json'))){
+            $portfolios = File::json(storage_path('data/portfolio.json'))['portfolios'];
+            return view('portfolio.portfolio', compact('portfolios'));
         }else{
             return "File does not exists";
         }
         
     }
 
-    public function portfolioDetails(int $id)
+    public function details(int $id)
     {
         
-        $project = null;
-        if(file_exists(storage_path('data/resume.json'))){
-            $projects = File::json(storage_path('data/resume.json'))['projects'];
-            foreach(File::json(storage_path('data/resume.json'))['projects'] as $item){
+        $portfolio = null;
+        if(file_exists(storage_path('data/portfolio.json'))){
+            $portfolios = File::json(storage_path('data/portfolio.json'))['portfolios'];
+            foreach($portfolios as $item){
                 if($item['id'] === $id){
-                    $project = $item;
+                    $portfolio = $item;
                 }
                 
             }
-            return view('portfolio.portfolio_details', compact('project'));
+            return view('portfolio.portfolio_details', compact('portfolio'));
         }else{
             return "File does not exists";
         }

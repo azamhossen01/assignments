@@ -74,13 +74,13 @@
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          @forelse ($projects as $project)
-          <div class="col-lg-4 col-md-6 portfolio-item {{ $project['filter-class'] }}">
+          @forelse ($portfolios as $portfolio)
+          <div class="col-lg-4 col-md-6 portfolio-item {{ $portfolio['filter-class'] }}">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/projects/{{ $project['image'] }}" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/projects/{{ $portfolio['image'] }}" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/projects/{{ $project['image'] }}" data-gall="portfolioGallery" class="venobox" title="{{ $project['title'] }}"><i class="bx bx-show"></i></a>
-                <a href="{{ route('portfolio.details', $project['id']) }}" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="assets/img/portfolio/projects/{{ $portfolio['image'] }}" data-gall="portfolioGallery" class="venobox" title="{{ $portfolio['title'] }}"><i class="bx bx-show"></i></a>
+                <a href="{{ route('portfolio.details', $portfolio['id']) }}" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>

@@ -1,0 +1,112 @@
+{ 
+    "portfolios": [
+        {
+          "id": 1,
+          "title": "Project 1",
+          "project_date" : "01 March 2021",
+          "category" : "CLI Application",
+          "client" : "USA Company",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "cli_1.png",
+          "link": "https://www.example.com/project1",
+          "filter-class" : "filter-cli",
+          "images" : ["cli_1.png", "cli_2.png", "cli_3.png"]
+        },
+        {
+          "id": 2,
+          "title": "Project 2",
+          "project_date" : "03 Jan 2019",
+          "category" : "CLI Application",
+          "client" : "Local Client",
+          "description": "Praesent in urna sit amet justo euismod euismod.",
+          "image": "cli_2.png",
+          "link": "https://www.example.com/project2",
+          "filter-class" : "filter-cli",
+          "images" : ["cli_1.png", "cli_2.png", "cli_3.png"]
+        },
+        {
+          "id": 3,
+          "title": "Project 3",
+          "project_date" : "30 Dec 2017",
+          "category" : "CLI Application",
+          "client" : "For Personal Use",
+          "description": "Vestibulum sed odio eget neque bibendum viverra.",
+          "image": "cli_3.png",
+          "link": "https://www.example.com/project3",
+          "filter-class" : "filter-cli",
+          "images" : ["cli_1.png", "cli_2.png", "cli_3.png"]
+        },
+        {
+          "id": 4,
+          "title": "Project 4",
+          "project_date" : "5 Oct 2022",
+          "category" : "CLI Application",
+          "client" : "Canadian Company",
+          "description": "Aenean non volutpat mi, eu consectetur odio.",
+          "image": "cli_4.png",
+          "link": "https://www.example.com/project4",
+          "filter-class" : "filter-cli",
+          "images" : ["cli_1.png", "cli_2.png", "cli_4.png"]
+        },
+        {
+          "id": 5,
+          "title": "Project 5",
+          "project_date" : "7 Dec 2020",
+          "category" : "PHP OOP Application",
+          "client" : "Serbian Company",
+          "description": "Suspendisse hendrerit quam vel tellus dictum, non condimentum erat.",
+          "image": "oop_2.png",
+          "link": "https://www.example.com/project5",
+          "filter-class" : "filter-oop",
+          "images" : ["cli_1.png", "oop_2.png", "oop_3.png"]
+        },
+        {
+          "id": 6,
+          "title": "Project 6",
+          "project_date" : "20 Apr 2019",
+          "category" : "PHP OOP Application",
+          "client" : "Local Company",
+          "description": "Suspendisse hendrerit quam vel tellus dictum, non condimentum erat.",
+          "image": "oop_3.png",
+          "link": "https://www.example.com/project6",
+          "filter-class" : "filter-oop",
+          "images" : ["cli_1.png", "oop_2.png", "oop_3.png"]
+        },
+        {
+          "id": 7,
+          "title": "Project 7",
+          "project_date" : "18 Nov 2020",
+          "category" : "Laravel Web Application",
+          "client" : "Kosovo Company",
+          "description": "Suspendisse hendrerit quam vel tellus dictum, non condimentum erat.",
+          "image": "laravel_1.png",
+          "link": "https://www.example.com/project7",
+          "filter-class" : "filter-laravel",
+          "images" : ["laravel_1.png", "laravel_2.png", "laravel_3.png"]
+        },
+        {
+          "id": 8,
+          "title": "Project 8",
+          "project_date" : "26 Mar 2023",
+          "category" : "Laravel Web Application",
+          "client" : "Local Client",
+          "description": "Suspendisse hendrerit quam vel tellus dictum, non condimentum erat.",
+          "image": "laravel_2.png",
+          "link": "https://www.example.com/project8",
+          "filter-class" : "filter-laravel",
+          "images" : ["facebook.png", "google.png", "youtube.png"]
+        },
+        {
+          "id": 9,
+          "title": "Project 9",
+          "project_date" : "31 Dec 2019",
+          "category" : "Laravel Web Application",
+          "client" : "Local Company",
+          "description": "Suspendisse hendrerit quam vel tellus dictum, non condimentum erat.",
+          "image": "laravel_3.png",
+          "link": "https://www.example.com/project9",
+          "filter-class" : "filter-laravel",
+          "images" : ["myrank.png", "linkedin.png", "chaldal.png"]
+        }
+      ]
+}

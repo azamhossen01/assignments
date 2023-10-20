@@ -51,7 +51,7 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfoio Details : {{ $project['title'] }}</h2>
+          <h2>Portfoio Details : {{ $portfolio['title'] }}</h2>
           <ol>
             <li><a href="{{ route('home') }}">Home</a></li>
             <li>Portfoio Details</li>
@@ -68,8 +68,8 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            @forelse ($project['images'] as $item)
-            <img src="{{ asset('assets/img/portfolio/projects/' . $item ) }}" class="img-fluid" alt="">
+            @forelse ($portfolio['images'] as $item)
+            <img src="{{ asset('assets/img/portfolio/portfolios/' . $item ) }}" class="img-fluid" alt="">
             @empty
                 
             @endforelse
@@ -79,12 +79,12 @@
           </div>
 
           <div class="portfolio-info">
-            <h3>Project information</h3>
+            <h3>portfolio information</h3>
             <ul>
-              <li><strong>Category</strong>: {{ $project['category'] }}</li>
-              <li><strong>Client</strong>: {{ $project['client'] }}</li>
-              <li><strong>Project date</strong>: {{ $project['project_date'] }}</li>
-              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <li><strong>Category</strong>: {{ $portfolio['category'] }}</li>
+              <li><strong>Client</strong>: {{ $portfolio['client'] }}</li>
+              <li><strong>portfolio date</strong>: {{ $portfolio['project_date'] }}</li>
+              <li><strong>portfolio URL</strong>: <a href="#">www.example.com</a></li>
             </ul>
           </div>
 
@@ -93,7 +93,7 @@
         <div class="portfolio-description">
           <h2>This is an example of portfolio detail</h2>
           <p>
-            {{ $project['description'] }}
+            {{ $portfolio['description'] }}
           </p>
         </div>
 

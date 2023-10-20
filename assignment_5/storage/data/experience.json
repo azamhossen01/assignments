@@ -1,0 +1,28 @@
+{
+    "work_experience": [
+        {
+            "position": "Senior Laravel Developer",
+            "company": "Tech Solutions Inc.",
+            "location": "New York, NY",
+            "start_date": "2020-03-15",
+            "end_date": "Present",
+            "responsibilities": "Developed and maintained web applications using Laravel. Collaborated with cross-functional teams to design, develop, and deploy feature-rich software solutions"
+        },
+        {
+            "position": "Laravel Developer",
+            "company": "CodeCrafters Ltd.",
+            "location": "San Francisco, CA",
+            "start_date": "2018-06-01",
+            "end_date": "2020-02-29",
+            "responsibilities": "Worked on Laravel-based projects, optimizing performance and implementing new features. Conducted code reviews and mentored junior developers"
+        },
+        {
+            "position": "Software Engineer",
+            "company": "WebTech Innovations",
+            "location": "Los Angeles, CA",
+            "start_date": "2016-01-10",
+            "end_date": "2018-05-15",
+            "responsibilities": "Developed and maintained Laravel web applications. Designed and implemented RESTful APIs and integrated third-party services"
+        }
+    ]
+}
