@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -28,15 +29,15 @@ class UserController extends Controller
             'password' => 'required',
             'bio' => 'max:200'
         ]);
-        $user = Auth::user();
-        $user->name = $request->name;
-        $user->username = $request->username;
-        $user->email = $request->email;
-        if(!empty($request->password)){
-            $user->password = Hash::make($request->password);
-        }
-        $user->bio = $request->bio;
-        $user->save();
+        DB::table('users')
+        ->where('id', Auth::id())
+        ->update([
+            'name' => $request->name,
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => $request->password ? Hash::make($request->password) : Auth::user()->password,
+            'bio' => $request->bio
+        ]);
         return redirect()->back()->with('success', 'User profile updated successfully.');
     }
 

@@ -29,25 +29,20 @@
         font-family: 'Inter', sans-serif;
       }
     </style>
+    @stack('style')
   </head>
   <body class="bg-gray-100">
     
     @include('layouts.partials.header')
-
+    @include('sweetalert::alert')
     <main
       class="container max-w-xl mx-auto space-y-8 mt-8 px-2 md:px-0 min-h-screen">
-
-      @if (session('success'))
-      <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mt-2">
-          {{ session('success') }}
-      </div>
-      @endif
   
-
       @yield('content')
 
-    
     </main>
+
     @include('layouts.partials.footer')
+    @stack('script')
   </body>
 </html>

@@ -1,10 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UserController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,10 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/edit_profile', [UserController::class, 'editProfile'])->name('edit_profile');
     Route::put('/update_profile', [UserController::class, 'updateProfile'])->name('update_profile');
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+
+    Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+    Route::get('/posts/show/{uuid}', [PostController::class, 'show'])->name('posts.show');
+    Route::get('/posts/edit/{uuid}', [PostController::class, 'edit'])->name('posts.edit');
+    Route::put('/posts/{uuid}', [PostController::class, 'update'])->name('posts.update');
+    Route::delete('/posts/{id}/delete', [PostController::class, 'destroy'])->name('posts.destroy');
 });
