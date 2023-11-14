@@ -17,6 +17,10 @@ class PostController extends Controller
         $request->validate([
             'description' => 'required|max:1000',
             'image' => 'image|mimes:png,jpg|size:1024'
+        ],[
+            'description.required' => 'বর্ণনা অবশ্যই দিতে হবে।',
+            'description.max' => 'সর্বোচ্চ ১০০০ এর বেশি দিতে পারবে না'
+            
         ]);
         $post = DB::table('posts')->insert([
             'user_id' => Auth::id(),
